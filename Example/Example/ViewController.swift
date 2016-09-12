@@ -6,20 +6,27 @@
 //
 
 import UIKit
-import Once
+import Twice
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    let task = "Tap button 3 times task"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Twice.initialize()
+        button.setTitle("Tap me 3 times!", for: UIControlState())
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonDidTouch(_ sender: UIButton) {
+        Twice.markDone(task)
+        if Twice.beenDone(task, scope: .appSession, numberOfTimes: .moreThan(2)) {
+            let alert = UIAlertController(title: "Congratulations", message: "You have tapped three times", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            show(alert, sender: nil)
+            Twice.clearDone(task)
+        }
     }
-
 
 }
-

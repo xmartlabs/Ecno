@@ -9,5 +9,5 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xctool clean build -project Once.xcodeproj -scheme Once -sdk iphonesimulator
-- xctool test -project Once.xcodeproj -scheme Once -sdk iphonesimulator
+- xctool clean build -project Twice.xcodeproj -scheme Twice -sdk iphonesimulator
+- xctool test -project Twice.xcodeproj -scheme Twice -sdk iphonesimulator

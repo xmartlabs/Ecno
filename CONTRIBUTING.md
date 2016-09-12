@@ -5,14 +5,14 @@ This document provides general guidelines about how to contribute to the project
 
 ### Asking Questions
 
-We do not use github issues for general library support. We think this questions should be posted on stack overflow using [Once](http://http://stackoverflow.com/questions/tagged/Once) tag.
+We do not use github issues for general library support. We think this questions should be posted on stack overflow using [Twice](http://http://stackoverflow.com/questions/tagged/Twice) tag.
 
 ### Reporting issues
 
-* Use [github issues](https://github.com/dernster/Once/issues) to report a bug.
+* Use [github issues](https://github.com/dernster/Twice/issues) to report a bug.
 * Before creating a new issue:
-  * Make sure you are using the [latest release](https://github.com/dernster/Once/releases).
-  * Check if the issue was [already reported or fixed](https://github.com/dernster/Once/issues?utf8=%E2%9C%93&q=is%3Aissue). Notice that it may not be released yet.
+  * Make sure you are using the [latest release](https://github.com/dernster/Twice/releases).
+  * Check if the issue was [already reported or fixed](https://github.com/dernster/Twice/issues?utf8=%E2%9C%93&q=is%3Aissue). Notice that it may not be released yet.
   * If you found a match add a brief comment "I have the same problem" or "+1". This helps prioritize the issues addressing the most common and critical first. If possible add additional information to help us reproduce and fix the issue. Please use your best judgement.    
 * Reporting issues:
   * Please include the following information to help maintainers to fix the problem faster:
@@ -34,9 +34,9 @@ The easiest way to start contributing is searching open issues by `help wanted` 
 
 ###### Suggested git workflow to contribute
 
-1. Fork the Once repository.
-2. Clone your forked project into your developer machine: `git clone git@github.com:<your-github-username>/Once.git`
-3. Add the original project repo as upstream repository in your forked project: `git remote add upstream git@github.com:dernster/Once.git`
+1. Fork the Twice repository.
+2. Clone your forked project into your developer machine: `git clone git@github.com:<your-github-username>/Twice.git`
+3. Add the original project repo as upstream repository in your forked project: `git remote add upstream git@github.com:dernster/Twice.git`
 4. Before starting a new feature make sure your forked master branch is synchronized upstream master branch. Considering you do not mere your pull request into master you can run: `git checkout master` and then `git pull upstream master`. Optionally `git push origin master`.
 5. Create a new branch. Note that the starting point is the upstream master branch HEAD. `git checkout -b my-feature-name`
 6. Stage all your changes `git add .` and commit them `git commit -m "Your commit message"`
@@ -56,6 +56,6 @@ We try to follow our [swift style guide](https://github.com/dernster/Swift-Style
 We would love to hear your ideas and make a discussions about it.
 
 * Use github issues to make feature proposals.
-* We use `type: feature request` label to mark all [feature request issues](https://github.com/dernster/Once/labels/type%3A%20feature%20request).
+* We use `type: feature request` label to mark all [feature request issues](https://github.com/dernster/Twice/labels/type%3A%20feature%20request).
 * Before submitting your proposal make sure there is no similar feature request. If you found a match feel free to join the discussion or just add a brief "+1" if you think the feature is worth implementing.
 * Be as specific as possible providing a precise explanation of feature request so anyone can understand the problem and the benefits of solving it.
