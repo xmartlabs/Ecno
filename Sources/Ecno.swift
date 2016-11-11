@@ -192,6 +192,9 @@ extension Ecno {
     }
 
     fileprivate static func isScope(_ scope: Scope, containing date: Date) -> Bool {
+        guard let lastAppUpdatedTime = lastAppUpdatedTime, let sessionStartTime = sessionStartTime else {
+            return false
+        }
         switch scope {
         case .appInstall:
             return true
