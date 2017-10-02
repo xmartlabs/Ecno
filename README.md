@@ -17,7 +17,7 @@ By <a href="https://xmartlabs.com/">Xmartlabs SRL</a>.
 
 ## Introduction
 
-**Ecno** was inspired by [Once](https://github.com/jonfinerty/Once) Android library. It's a task state manager built on top of UserDefaults in pure Swift 3. This abstraction allows you to mark 'tasks' as done, 'to-do' and check for those states.  
+**Ecno** was inspired by [Once](https://github.com/jonfinerty/Once) Android library. It's a task state manager built on top of UserDefaults in pure Swift 4. This abstraction allows you to mark 'tasks' as done, 'to-do' and check for those states.  
 
 **Ecno** is ideal for:
 * Show tutorials once within the application.
@@ -115,8 +115,8 @@ Marks a task as done.
 ## Requirements
 
 * iOS 8.0+
-* Swift 3.0+
-* Xcode 8.0+
+* Swift 4.0+
+* Xcode 9.0+
 
 ## Getting involved
 
