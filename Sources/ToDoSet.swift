@@ -80,7 +80,8 @@ class ToDoSet {
     func clearExpiredData() {
         // remove 'to do' tasks with scope == .until if it's expired
         var filtered = dictionary
-        filtered.forEach { key, value in
+        filtered.forEach { (arg) in
+            let (key, value) = arg
             switch Scope.fromDictionary(value[scopeKey] as? [AnyHashable: Any] ?? [:]) {
             case let .some(.until(time)) where time.timeInterval < 0:
                 filtered.removeValue(forKey: key)
