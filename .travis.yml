@@ -1,9 +1,9 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode10.2
 env:
-  - DESTINATION="OS=11.0,name=iPhone X" SCHEME="Ecno" SDK=iphonesimulator11.0
+  - DESTINATION="OS=12.2,name=iPhone X" SCHEME="Ecno" SDK=iphonesimulator12.2
 before_install:
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty --quiet
 script:
   - set -o pipefail
   - xcodebuild -version
