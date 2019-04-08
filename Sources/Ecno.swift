@@ -47,7 +47,7 @@ open class Ecno {
     /**
      Initializer method. It must be called before start using any Ecno method.
      */
-    open static func initialize() {
+    public static func initialize() {
         let userDefaults = UserDefaults.standard
         let currentAppVersion = appVersion()
         let userDefaultsAppVersion = userDefaults.string(forKey: Constants.appVersionKey)
@@ -69,7 +69,7 @@ open class Ecno {
      - parameter scope: The scope to not repeat the to do task in.
      - parameter info: Additional info for the to do task.
      */
-    open static func toDo(_ task: Task, scope: Scope? = nil, info: [AnyHashable: Any]? = nil) {
+    public static func toDo(_ task: Task, scope: Scope? = nil, info: [AnyHashable: Any]? = nil) {
         guard let scope = scope else {
             toDoSet.add(task, scope: .appInstall, withInfo: info)
             return
@@ -90,7 +90,7 @@ open class Ecno {
 
      - returns: Whether or not the task needs to be done.
      */
-    open static func needToDo(_ task: Task) -> Bool {
+    public static func needToDo(_ task: Task) -> Bool {
         return toDoSet.getDataForTask(task).map { isScope($0.scope, containing: Date()) } ?? false
     }
 
@@ -101,7 +101,7 @@ open class Ecno {
 
      - returns: The info of the 'to do' task if it exists.
      */
-    open static func infoForToDo(_ task: Task) -> [AnyHashable: Any]? {
+    public static func infoForToDo(_ task: Task) -> [AnyHashable: Any]? {
         return toDoSet.getDataForTask(task)?.info
     }
 
@@ -112,7 +112,7 @@ open class Ecno {
 
      - returns: The task's last timestamp or `nil` if it does not exist.
      */
-    open static func lastDone(_ task: Task) -> Date? {
+    public static func lastDone(_ task: Task) -> Date? {
         return timestampsDictionary[task].last
     }
 
@@ -125,7 +125,7 @@ open class Ecno {
 
      - returns: Whether or not the task has been done within the given constraints.
      */
-    open static func beenDone(_ task: Task, scope: Scope = .appInstall, numberOfTimes: CountChecker = .moreThan(0)) -> Bool {
+    public static func beenDone(_ task: Task, scope: Scope = .appInstall, numberOfTimes: CountChecker = .moreThan(0)) -> Bool {
         let timestamps = timestampsDictionary[task]
         let dateInScope = filterDateInScope(scope)
         return !timestamps.isEmpty && numberOfTimes.check(timestamps.filter(dateInScope).count)
@@ -136,7 +136,7 @@ open class Ecno {
 
      - parameter task: The task to mark as done.
      */
-    open static func markDone(_ task: Task) {
+    public static func markDone(_ task: Task) {
         timestampsDictionary[task] = timestampsDictionary[task] + [Date()]
         toDoSet.remove(task)
     }
@@ -146,7 +146,7 @@ open class Ecno {
 
      - parameter task: The task to be cleared.
      */
-    open static func clearDone(_ task: Task) {
+    public static func clearDone(_ task: Task) {
         timestampsDictionary[task] = []
     }
 
@@ -155,28 +155,28 @@ open class Ecno {
 
      - parameter task: The task to be removed from 'to do'.
      */
-    open static func clearToDo(_ task: Task) {
+    public static func clearToDo(_ task: Task) {
         toDoSet.remove(task)
     }
 
     /**
      Clears all 'done' marks for all tasks.
      */
-    open static func clearDoneTasks() {
+    public static func clearDoneTasks() {
         timestampsDictionary.clear()
     }
 
     /**
      Removes all tasks from their 'to do' state.
      */
-    open static func clearToDoTasks() {
+    public static func clearToDoTasks() {
         toDoSet.clear()
     }
 
     /**
      Clear all 'done' and 'to do' tasks.
      */
-    open static func clearAll() {
+    public static func clearAll() {
         clearDoneTasks()
         clearToDoTasks()
     }

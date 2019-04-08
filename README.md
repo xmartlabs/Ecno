@@ -5,7 +5,7 @@
 <p align="center">
 <a href="https://travis-ci.org/xmartlabs/Ecno"><img src="https://travis-ci.org/xmartlabs/Ecno.svg?branch=master" alt="Build status" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift5-compatible-4BC51D.svg?style=flat" alt="Swift 5 compatible" /></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
 <a href="https://cocoapods.org/pods/Ecno"><img src="https://img.shields.io/cocoapods/v/Ecno.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/xmartlabs/Ecno/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
@@ -144,7 +144,7 @@ Follow these 3 steps to run Example project:
 To install Ecno, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Ecno', '~> 1.0'
+pod 'Ecno', '~> 3.0'
 ```
 
 #### Carthage
@@ -154,7 +154,7 @@ pod 'Ecno', '~> 1.0'
 To install Ecno, simply add the following line to your Cartfile:
 
 ```ogdl
-github "xmartlabs/Ecno" ~> 1.0
+github "xmartlabs/Ecno" ~> 3.0
 ```
 
 ## Author
